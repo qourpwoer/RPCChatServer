@@ -1,0 +1,5 @@
+/home/jour/RpcChatserver-master/client/src/CMakeFiles/rebuild_cache.dir
+/home/jour/RpcChatserver-master/client/src/CMakeFiles/edit_cache.dir
+/home/jour/RpcChatserver-master/client/src/src/CMakeFiles/rebuild_cache.dir
+/home/jour/RpcChatserver-master/client/src/src/CMakeFiles/edit_cache.dir
+/home/jour/RpcChatserver-master/client/src/src/CMakeFiles/client.dir

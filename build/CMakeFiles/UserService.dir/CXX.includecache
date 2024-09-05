@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jour/RpcChatserver-master/server/userservice/src/main.cpp
+
+/home/jour/RpcChatserver-master/server/userservice/src/userservice.cpp
+

@@ -1,0 +1,1 @@
+/usr/local/bin/g++  -g  -rdynamic CMakeFiles/UserService.dir/main.o CMakeFiles/UserService.dir/userservice.o  -o UserService  -lprotobuf -lpthread -lzookeeper_mt -lhiredis -lmysqlclient 

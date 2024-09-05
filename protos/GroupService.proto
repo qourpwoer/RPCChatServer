@@ -1,0 +1,88 @@
+syntax = "proto3";
+
+package ik_GroupService;
+
+option cc_generic_services = true;
+
+message AddGroupRequest
+{
+    int32 userid = 1;
+    int32 groupid = 2;
+}
+
+message AddGroupResponse
+{
+    bool is_success = 1;
+    bytes err_msg = 2;
+}
+
+message CreateGroupRequest
+{
+    int32 userid =  1;
+    bytes groupname = 2;
+    bytes groupdesc = 3;
+}
+
+message CreateGroupResponse
+{
+    bool is_success = 1;
+    int32 id = 2;
+    bytes err_msg = 3;
+}
+
+message QuitGroupRequest
+{
+    int32 userid = 1;
+    int32 groupid = 2;
+}
+
+message QuitGroupResponse
+{
+    bool is_success = 1;
+    bytes err_msg = 2;
+}
+
+message GetGroupUsersRequest
+{
+    int32 groupid = 1;
+}
+
+message UserInfo
+{
+    int32 id = 1;
+    bytes name = 2;
+    bytes grouprole = 3;
+}
+
+message GetGroupUsersResponse
+{
+    bool is_success = 1;
+    repeated UserInfo users = 2;
+}
+
+message GetGroupsRequest
+{
+    int32 userid = 1;
+}
+
+message GroupInfo
+{
+    int32 id = 1;
+    bytes groupname = 2;
+    bytes groupdesc = 3;
+}
+
+message GetGroupsResponse
+{
+    bool is_success = 1;
+    repeated GroupInfo groups = 2;
+}
+
+service GroupServiceRpc
+{
+    rpc AddGroup (AddGroupRequest) returns (AddGroupResponse);
+    rpc CreateGroup (CreateGroupRequest) returns (CreateGroupResponse);
+    rpc QuitGroup (QuitGroupRequest) returns (QuitGroupResponse);
+    rpc GetGroupUsers (GetGroupUsersRequest) returns (GetGroupUsersResponse);
+    rpc GetGroups (GetGroupsRequest) returns (GetGroupsResponse);
+}

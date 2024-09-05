@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package ik_ChatService;
+
+option cc_generic_services = true;
+
+import "google/protobuf/empty.proto";
+
+message OneChatRequest
+{
+    int32 id = 1;
+    int32 toid = 2;
+    bytes time = 3;
+    bytes msg = 4;
+}
+
+
+message GroupChatRequest
+{
+    int32 userid = 1;
+    int32 groupid = 2;
+    bytes time = 3;
+    bytes msg = 4;
+}
+
+message ChatMsg
+{
+    bool is_group = 1;
+    int32 id = 2;
+    int32 toid = 3;
+    bytes username = 4;
+    bytes msg = 5;
+    int32 groupid = 6;
+    bytes time = 7;
+}
+
+service ChatServiceRpc
+{
+    rpc OneChat(OneChatRequest) returns(google.protobuf.Empty);
+    rpc GroupChat(GroupChatRequest) returns(google.protobuf.Empty);
+}

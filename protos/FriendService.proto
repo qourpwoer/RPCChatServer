@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package ik_FriendService;
+
+option cc_generic_services = true;
+
+message UserInfoRequest
+{
+    int32 id = 1;
+}
+
+message UserInfoResponse
+{
+    int32 id = 1;
+    bytes name = 2;
+}
+
+message FriendInfo
+{
+    int32 id = 1;
+    bytes name = 2;
+}
+
+message FriendListRequest
+{
+    int32 id = 1;
+}
+
+message FriendListResponse
+{
+    bool is_success = 1;
+    repeated FriendInfo friends = 2;
+}
+
+message AddFriendRequest
+{
+    int32 myid = 1;
+    int32 friendid = 2;
+}
+
+message AddFriendResponse
+{
+    bool is_success = 1;
+    bytes name = 2;
+}
+
+message DeleteFriendRequest
+{
+    int32 myid = 1;
+    int32 friendid = 2;
+}
+
+message DeleteFriendResponse
+{
+    bool is_success = 1;
+    bytes name = 2;
+}
+
+service FriendServiceRpc
+{
+    rpc GetFriendList(FriendListRequest) returns(FriendListResponse);
+    rpc GetUserInfo(UserInfoRequest) returns(UserInfoResponse);
+    rpc AddFriend(AddFriendRequest) returns(AddFriendResponse);
+    rpc DeleteFriend(DeleteFriendRequest) returns(DeleteFriendResponse);
+}

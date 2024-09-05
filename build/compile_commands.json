@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/jour/RpcChatserver-master/build",
+  "command": "/usr/local/bin/g++   -I/home/jour/RpcChatserver-master/server/userservice/src/../../protos -I/home/jour/RpcChatserver-master/server/userservice/src/../third/mysql -I/home/jour/RpcChatserver-master/server/userservice/src/../third/redis -I/home/jour/RpcChatserver-master/server/userservice/src/../third/zookeeper -I/home/jour/RpcChatserver-master/server/userservice/src/../third/mymuduo -I/home/jour/RpcChatserver-master/server/userservice/src/../third/mprpc/proto -I/home/jour/RpcChatserver-master/server/userservice/src/../third/mprpc -I/home/jour/RpcChatserver-master/server/userservice/src/include  -g   -o CMakeFiles/UserService.dir/main.o -c /home/jour/RpcChatserver-master/server/userservice/src/main.cpp",
+  "file": "/home/jour/RpcChatserver-master/server/userservice/src/main.cpp"
+},
+{
+  "directory": "/home/jour/RpcChatserver-master/build",
+  "command": "/usr/local/bin/g++   -I/home/jour/RpcChatserver-master/server/userservice/src/../../protos -I/home/jour/RpcChatserver-master/server/userservice/src/../third/mysql -I/home/jour/RpcChatserver-master/server/userservice/src/../third/redis -I/home/jour/RpcChatserver-master/server/userservice/src/../third/zookeeper -I/home/jour/RpcChatserver-master/server/userservice/src/../third/mymuduo -I/home/jour/RpcChatserver-master/server/userservice/src/../third/mprpc/proto -I/home/jour/RpcChatserver-master/server/userservice/src/../third/mprpc -I/home/jour/RpcChatserver-master/server/userservice/src/include  -g   -o CMakeFiles/UserService.dir/userservice.o -c /home/jour/RpcChatserver-master/server/userservice/src/userservice.cpp",
+  "file": "/home/jour/RpcChatserver-master/server/userservice/src/userservice.cpp"
+}
+]
